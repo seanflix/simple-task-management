@@ -29,7 +29,9 @@ const cancel = () => {
             #default="{ errors, processing }"
         >
             <div class="flex flex-col gap-2">
-                <label for="project-name" class="text-sm font-medium">Name</label>
+                <label for="project-name" class="text-sm font-medium"
+                    >Name</label
+                >
                 <input
                     id="project-name"
                     v-focus
