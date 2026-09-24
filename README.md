@@ -2,6 +2,15 @@
 
 A small Laravel app for creating projects and ordering their tasks by priority.
 
+## Tech Stack Used
+
+- PHP 8.3+ and Laravel 13 for the backend
+- MySQL for the database
+- Inertia.js with Vue 3 for the frontend
+- Tailwind CSS 4 for styling
+- Vite to build frontend
+- Node.js and npm to install and build frontend packages
+
 ## Requirements
 
 - PHP 8.3 or newer
