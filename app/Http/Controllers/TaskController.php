@@ -40,7 +40,8 @@ class TaskController extends Controller
             'name' => ['required', 'string', 'max:255'],
         ]);
 
-        $project = Project::query()->findOrFail($validated['project_id']);
+        $projectId = $request->integer('project_id');
+        $project = Project::query()->findOrFail($projectId);
         $priority = ((int) $project->tasks()->max('priority')) + 1;
 
         $project->tasks()->create([
@@ -102,7 +103,8 @@ class TaskController extends Controller
             ]);
         }
 
-        $project = Project::query()->findOrFail($projectIds->first());
+        $projectId = (int) $projectIds->first();
+        $project = Project::query()->findOrFail($projectId);
         $taskCount = $project->tasks()->count();
 
         if (count($ids) !== $taskCount) {
